@@ -6,6 +6,10 @@
 
 See also [Vue-Scroller](https://github.com/wangdahoo/vue-scroller) doing recursion instead of timer(setInterval) to improve performance.
 
+## Demo
+
+[https://lzyerliu.github.io/vue-scroller-loading](https://lzyerliu.github.io/vue-scroller-loading/doc/index.html)
+
 ## Usage
 
 ``` bash
