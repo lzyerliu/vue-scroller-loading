@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.11/dist/vue.min.js"></script>
+  <script src="../vue-scroller-loading.js"></script>
+  <title>Vue Scroller Loading</title>
+  <style>
+    html, body{
+      margin: 0;
+    }
+    *{
+      box-sizing: border-box;
+    }
+    .row{
+      width: 100%;
+      height: 54px;
+      line-height: 54px;
+      font-size: 16px;
+      color: #666;
+      text-align: center;
+      background: #fff;
+    }
+    .grey-bg{
+      background: #ececec;
+    }
+    .nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 45px;
+      box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+      color: #333;
+      background: #fff;
+      z-index: 2019;
+    }
+    .nav .title{
+      font-size: 16px;
+      line-height: 45px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="nav">
+      <h2 class="title">Refresh & Infinite</h2>
+    </div>
+    <scroller
+      :on-refresh="refresh"
+      :on-infinite="infinite"
+      style="padding-top: 45px;"
+    >
+      <div v-for="(item, index) in list" :key="index" class="row" :class="{ 'grey-bg': index % 2 == 0 }">
+        {{ item }}
+      </div>
+    </scroller>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      list: []
+    },
+    mounted() {
+      for (var i = 0; i <= 20; i++) {
+        this.list.push(i + ' - item of list!')
+      }
+      this.top = 1
+      this.bottom = 20
+    },
+    methods: {
+      refresh: function (done) {
+        var _this = this
+        setTimeout(function () {
+          var start = _this.top - 1
+          for (var i = start; i > start - 10; i--) {
+            _this.list.splice(0, 0, i + ' - item of list!')
+          }
+          _this.top = _this.top - 10
+          done()
+        }, 1600);
+      },
+      infinite: function (done) {
+        var _this = this
+
+        if (_this.bottom >= 40) {
+          setTimeout(function () {
+            done(true)
+          }, 1200);
+          return
+        }
+
+        setTimeout(function () {
+          var start = _this.bottom + 1
+          for (var i = start; i < start + 10; i++) {
+            _this.list.push(i + ' - item of list!')
+          }
+          _this.bottom = _this.bottom + 10
+          done()
+        }, 1600);
+      }
+    }
+  })
+</script>
+</html>

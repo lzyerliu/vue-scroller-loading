@@ -1,0 +1,23 @@
+/*flex on box*/
+.f-row{display: flex;display: -webkit-flex;flex-direction: row;-webkit-flex-direction: row;}
+.f-col{display: flex;display: -webkit-flex;flex-direction: column;-webkit-flex-direction: column;}
+.f-justify-start{justify-content: flex-start;-webkit-justify-content: flex-start;}
+.f-justify-end{justify-content: flex-end;-webkit-justify-content: flex-end;}
+.f-justify-center{justify-content: center;-webkit-justify-content: center;}
+.f-justify-between{justify-content: space-between;-webkit-justify-content: space-between;}
+.f-justify-around{justify-content: space-around;-webkit-justify-content: space-around;}
+.f-align-start{align-items: flex-start;-webkit-align-items: flex-start;}
+.f-align-end{align-items: flex-end;-webkit-align-items: flex-end;}
+.f-align-center{align-items: center;-webkit-align-items: center;}
+.f-align-baseline{align-items: baseline;-webkit-align-items: baseline;}
+.f-align-stretch{align-items: stretch;-webkit-align-items: stretch;}
+.f-wrap-nowrap{flex-wrap: nowrap;-webkit-flex-wrap: nowrap;}
+.f-wrap-wrap{flex-wrap: wrap;-webkit-flex-wrap: wrap;}
+.f-wrap-reverse{flex-wrap: wrap-reverse;-webkit-flex-wrap: wrap-reverse;}
+/*flex on item*/
+.f-cover{flex: 1;-webkit-flex: 1;}
+.f-align-self-start{align-self: flex-start;-webkit-align-self: flex-start;}
+.f-align-self-end{align-self: flex-end;-webkit-align-self: flex-end;}
+.f-align-self-center{align-self: center;-webkit-align-self: center;}
+.f-align-self-baseline{align-self: baseline;-webkit-align-self: baseline;}
+.f-align-self-stretch{align-self: stretch;-webkit-align-self: stretch;}
