@@ -1,9 +1,14 @@
 {
   "name": "vue-scroller-loading",
   "description": "Vue component for smooth scroll, pull to refresh & infinite loading.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "lzyerliu <lzyerliu@163.com>",
   "main": "dist/vue-scroller-loading.js",
+  "homepage": "https://github.com/lzyerliu/vue-scroller-loading",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lzyerliu/vue-scroller-loading.git"
+  },
   "license": "MIT",
   "private": false,
   "scripts": {
