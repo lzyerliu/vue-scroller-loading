@@ -52,13 +52,3 @@ Vue.use(Scroller)
 | refreshLayerColor | text color of `pull-to-refresh` layer | N | #999 |
 | loadingLayerColor | text color of `infinite-loading` layer | N | #999 |
 | minContentHeight | min content height (px) of `scroll-content` | N | 0 |
-
-#### Scroller vm instance methods:
-
-- `resize()` resize scroller content (**deprecated, cause the scroller's content resizes self automatically**)
-- `triggerPullToRefresh()` start pull-to-refresh manually
-- `finishPullToRefresh()` stop pull-to-refresh
-- `finishInfinite(isNoMoreData :Boolean)` stop infinite-loading
-- `scrollTo(x:Integer, y:Integer, animate:Boolean)` scroll to a position in scroller content
-- `scrollBy(x:Integer, y:Integer, animate:Boolean)` scroll by a position in scroller content
-- `getPosition :Object` get current position of scroller content
